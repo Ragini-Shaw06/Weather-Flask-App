@@ -1,44 +1,63 @@
-#Weather-Flask-App
+# Weather Flask App
+
 This is a simple Flask web application that allows users to retrieve current weather information for a specified location. It uses the WeatherAPI.com API to fetch weather data based on the user's input.
 
-Features
-Get live weather data for any location.
-Display temperature in both Celsius and Fahrenheit.
-Show additional weather details like wind speed, humidity, and visibility.
-Technologies Used
-Python (Flask)
-HTML
-CSS
-JavaScript
-Installation
-Clone the repository:
+## Features
 
-git clone https://github.com/raginishaw/Weather-Flask-App.git
-Install the required Python packages:
+- Get live weather data for any location.
+- Display temperature in both Celsius and Fahrenheit.
+- Show additional weather details like wind speed, humidity, and visibility.
 
-pip install -r requirements.txt
-Obtain a free API key from WeatherAPI.com and replace API_KEY in app.py with your API key.
+## Technologies Used
 
-Usage
-Run the Flask application:
+- Python (Flask)
+- HTML
+- CSS
+- JavaScript
 
-python app.py
-Open your web browser and navigate to http://localhost:5000.
+## Installation
 
-Enter a location in the input field and click "What's the Weather".
+1. Clone the repository:
 
-The app will display the current weather details for that location.
+    ```sh
+    git clone https://github.com/raginishaw/Weather-Flask-App.git
+    ```
 
-File Structure
-Weather-Flask-App.app/
+2. Install the required Python packages:
+
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+3. Obtain a free API key from WeatherAPI.com and replace `API_KEY` in `app.py` with your API key.
+
+## Usage
+
+1. Run the Flask application:
+
+    ```sh
+    python app.py
+    ```
+
+2. Open your web browser and navigate to [http://localhost:5000](http://localhost:5000).
+
+3. Enter a location in the input field and click "What's the Weather".
+
+4. The app will display the current weather details for that location.
+
+## File Structure
+
+Weather-Flask-App/
 │
-├── app.py                  # Main application file
-├── requirements.txt        # List of required packages
-├── templates/
-    └── home.html           # HTML template for the home page
+├── app.py # Main application file
+├── requirements.txt # List of required packages
+└── templates/
+└── home.html # HTML template for the home page
 
-Contributing
+## Contributing
+
 Contributions are welcome! Please create a pull request or open an issue for any changes or suggestions.
 
-Contact
-Email: raginishaw0607@gmail.com
+## Contact
+
+Email: [raginishaw0607@gmail.com](mailto:raginishaw0607@gmail.com)
