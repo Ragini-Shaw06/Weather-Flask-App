@@ -13,7 +13,7 @@ JavaScript
 Installation
 Clone the repository:
 
-git clone https://github.com/sidhharthashaw/Weather-Flask-App.git
+git clone https://github.com/raginishaw/Weather-Flask-App.git
 Install the required Python packages:
 
 pip install -r requirements.txt
