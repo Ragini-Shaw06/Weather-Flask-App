@@ -115,7 +115,6 @@ Weather-Flask-App/
 ├── .env.example          # Example environment file
 ├── .gitignore            # Git ignore rules
 ├── README.md             # Project documentation
-├── test_app.py           # Simple test application
 └── templates/            # Flask templates directory
     └── home.html         # Main HTML template with styling
 ```
