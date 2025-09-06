@@ -7,13 +7,15 @@ This is a simple Flask web application that allows users to retrieve current wea
 - Get live weather data for any location.
 - Display temperature in both Celsius and Fahrenheit.
 - Show additional weather details like wind speed, humidity, and visibility.
+- Secure API key management with environment variables.
+- Robust error handling and input validation.
 
 ## Technologies Used
 
 - Python (Flask)
 - HTML
 - CSS
-- JavaScript
+- Weather API (weatherapi.com)
 
 ## Installation
 
@@ -21,6 +23,7 @@ This is a simple Flask web application that allows users to retrieve current wea
 
     ```sh
     git clone https://github.com/raginishaw/Weather-Flask-App.git
+    cd Weather-Flask-App
     ```
 
 2. Install the required Python packages:
@@ -29,7 +32,15 @@ This is a simple Flask web application that allows users to retrieve current wea
     pip install -r requirements.txt
     ```
 
-3. Obtain a free API key from WeatherAPI.com and replace `API_KEY` in `app.py` with your API key.
+3. Set up environment variables:
+   - Copy the `.env.example` file to `.env` (or rename the existing `.env`)
+   - Obtain a free API key from [WeatherAPI.com](https://www.weatherapi.com/)
+   - Update the `API_KEY` in the `.env` file with your API key
+
+4. Ensure you have the following packages installed:
+   - Flask==2.3.3
+   - requests==2.32.4
+   - python-dotenv==1.0.0
 
 ## Usage
 
@@ -47,7 +58,36 @@ This is a simple Flask web application that allows users to retrieve current wea
 
 ## File Structure
 
+```
 Weather-Flask-App/
+│
+├── app.py                 # Main Flask application
+├── requirements.txt       # Python dependencies
+├── .env                   # Environment variables (API keys)
+├── .gitignore            # Git ignore file
+├── README.md             # Project documentation
+└── templates/            # Flask templates directory
+    └── home.html         # Main HTML template
+```
+
+## Security Notes
+
+- The API key is now stored in an environment variable for security
+- The `.env` file should never be committed to version control
+- Make sure to add `.env` to your `.gitignore` file
+
+## Error Handling
+
+The app now includes comprehensive error handling for:
+- Network connection issues
+- Invalid API responses
+- Missing data fields
+- Request timeouts
+- Invalid location names
+
+## API Information
+
+This app uses the WeatherAPI.com service. You can get a free API key by registering at [https://www.weatherapi.com/](https://www.weatherapi.com/).
 │
 ├── app.py # Main application file
 ├── requirements.txt # List of required packages
