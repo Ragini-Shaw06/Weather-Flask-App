@@ -57,10 +57,10 @@
         <h1>Live Weather Forecast</h1>
     </div>
 
-    <form action='/predict_weather' class='main-form' method="POST">
+    <form action="/predict_weather" class='main-form' method="POST">
 
         <div class='text-center'>
-            <input type="text" id="location" name='location' placeholder="Enter the Location" style="font-size:20px;margin-bottom:10px;width: 700px;">
+            <input type="text" id="location" name='location' placeholder="Enter the Location" style="font-size:20px;margin-bottom:10px;width: 700px;" required>
             <button type='submit' class='btn btn-outline-success'
                 style="margin-top:10px;margin-bottom:10px;width: 700px;"> What's the Weather
             </button>
@@ -69,10 +69,9 @@
     </form>
 
     {% if error %}
-    <div class='text-center'style="margin: 0px 20px 0px 20px;background-color: rgb(0, 0, 0, 0.7);color: #FFFFFF; padding-bottom: 20px;">
-    <h2>{{ error }}</h2>
+    <div class='text-center' style="margin: 0px 20px 0px 20px;background-color: rgb(0, 0, 0, 0.7);color: #FFFFFF; padding-bottom: 20px;">
+        <h2>{{ error }}</h2>
     </div>
-
     {% endif %}
 
     {% if name %}
