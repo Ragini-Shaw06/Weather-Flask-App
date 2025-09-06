@@ -43,20 +43,17 @@ def predict_weather():
         
         try:
             response = requests.request("GET", url, headers=headers, params=querystring, timeout=10)
-            response.raise_for_status()  # Raises an HTTPError for bad responses
+            response.raise_for_status()
             
             json_data = response.json()
             
-            # Check if the API returned an error
             if 'error' in json_data:
                 return render_template('home.html', error=f"Weather API Error: {json_data['error'].get('message', 'Unknown error')}")
             
-            # Extract location data
             location = json_data.get('location', {})
             current = json_data.get('current', {})
             condition = current.get('condition', {})
             
-            # Prepare data for template
             weather_data = {
                 'name': location.get('name'),
                 'region': location.get('region'),
@@ -111,4 +108,6 @@ def predict_weather():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # ✅ Required for Render deployment
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
