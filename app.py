@@ -23,16 +23,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    print("Home route accessed successfully")
     return render_template('home.html')
-
-@app.route('/test')
-def test():
-    return "Test route working!"
 
 @app.route('/predict_weather', methods=['GET', 'POST'])
 def predict_weather():
-    print(f"predict_weather route accessed with method: {request.method}")
     if request.method == 'POST':
         q = request.form['location']
         
